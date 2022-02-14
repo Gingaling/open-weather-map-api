@@ -20,6 +20,8 @@ For this assignment you'll be using the Open Weather Data API. In order to use i
 api.openweathermap.org/data/2.5/weather?zip={ZIP CODE},us&units=imperial&appid={API KEY}
 ```
 
+Once your key works, set up a static site in this repository with an HTML page, as well as files for CSS and JS. 
+
 ## Your page should have:
 - An input field for a user to enter a zip code
 - A submit button
