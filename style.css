@@ -1,0 +1,26 @@
+
+body {
+	/* background-color: rgb(151, 151, 220) */
+}
+
+    div {
+}
+
+<input.zipCode> {
+    height: 200px;
+    width: 300px;
+    margin: 20px 20px 20px 20px;
+	outline: 60px dotted green;
+	color: white;
+    align-self: center;
+	background-color: navy;
+}
+
+
+<button.search> {
+    height: 300px;
+    min-width: 400px;
+  outline-color: black;
+
+
+}
