@@ -1,26 +1,48 @@
-
 body {
 	/* background-color: rgb(151, 151, 220) */
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	justify-content: flex-statt;
+    align-content: center;
+    ju
 }
 
-    div {
+section.1 {
+	display: flex;wqwwwa
 }
 
-<input.zipCode> {
-    height: 200px;
-    width: 300px;
-    margin: 20px 20px 20px 20px;
+input.zipCode {
+	height: 200px;
+	width: 300px;
+	margin: 20px 20px 20px 20px;
 	outline: 60px dotted green;
 	color: white;
-    align-self: center;
+	align-self: center;
 	background-color: navy;
 }
 
+button.submit {
+	line-height: 50px;
+	width: 400px;
+	outline-color: black;
+}
 
-<button.search> {
-    height: 300px;
-    min-width: 400px;
-  outline-color: black;
+section.2 {
+	display: flex;
+}
 
+div.top-section {
+	display: flex;
+	flex-direction: row;
+}
 
+div.mid-section {
+	display: flex;
+	flex-direction: column;
+}
+
+div.btm-section {
+	display: flex;
+	flex-direction: row;
 }

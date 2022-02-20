@@ -1,14 +1,16 @@
-const url =
-	'api.openweathermap.org/data/2.5/weather?zip={94109},us&units=imperial&appid={cdc1790221c7ab89f105c2e5dbba8722}';
+const url = `api.openweathermap.org/data/2.5/weather?zip={${input.val}},us&units=imperial&appid={df35e93312fb4ec3f7593d0a28cae1aa}`;
 
-fetch(url)
-	.then(function (response) {
-		return response.json;
-	})
-	.then(function (json) {
-		let products = json;
-		initialize(products);
-	})
-	.catch(function (err) {
-		console.log('Fetch problem: ' + err.message);
-	});
+$(button.submit).on('click', () => {
+	fetch(url)
+	    .then(function (response) { 
+			return response.json;
+		})
+		.then get (data.json){
+			console.log(products = json);
+			initialize(products);
+		})
+		.catch(function () +> {
+			console.log('Fetch problem: ' + err.message);
+		})
+	};
+}
