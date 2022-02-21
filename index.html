@@ -6,20 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<!-- Google Fonts -->
-	<link
-		href="https://fonts.googleapis.com/css?family=Open+Sans"
-		rel="stylesheet"
-	/>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
 
 	<!-- Style Sheet -->
-	<link
-		rel="stylesheet" 
-		href="./style.css"
+	<link rel="stylesheet" href="./style.css"/>
 
-	<!-- JQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-	</script>
-
+	<!-- JQuery
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+	
 	<!-- Scripts -->
 	<script src="./script.js" defer></script>
 
@@ -27,27 +21,27 @@
 </head>
 
 <body>
-	<section id="1">
-        <input id='zipCode' value='Please enter yor zip code.'></input>
-		<button id="submit"></button>
-	</section>
-	<section id="2">		
+	<div id="1">
+		<nav id=""top-area>
+			<input id='zipCode' value='Please enter yor zip code.'></input>
+			<input type='submit' value='Submit'>
+		</nav>
 		<div id="mid-section">
 			<p id="city">CITY</p>
 			<p id="temp">TEMPERATURE</p>
 			<p id="forecast">FORECAST</p>
 		</div>
-		
-		<div id="btm-section">
-			<section id="min">
-				<p id="minimum">min</p>
-				<p id="min-temp">MIN-TEMP</p>
-			</section>
-			<section id="max">
-				<p id="maximum">max</p>
-				<p id="max-temp">MAX-TEMP</p>
-			</section>
+	</div
+	
+	<div id="2">
+		<div id="min">
+			<p id="minimum">min</p>
+			<p id="min-temp">MIN-TEMP</p>
 		</div>
-	</section>
-    </body>
+		<div id="max">
+			<p id="maximum">max</p>
+			<p id="max-temp">MAX-TEMP</p>
+		</div>
+	</div>
+</body>
 </html>
