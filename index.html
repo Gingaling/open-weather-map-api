@@ -10,38 +10,45 @@
 
 	<!-- Style Sheet -->
 	<link rel="stylesheet" href="./style.css"/>
-
-	<!-- JQuery
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
-	
-	<!-- Scripts -->
-	<script src="./script.js" defer></script>
-
+	<!-- 
+		<!-- JQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+		
+		
 		<title>Ging Louie's Weather App</title>
-</head>
-
-<body>
-	<div id="1">
-		<nav id=""top-area>
-			<input id='zipCode' value='Please enter yor zip code.'></input>
-			<input type='submit' value='Submit'>
-		</nav>
-		<div id="mid-section">
-			<p id="city">CITY</p>
-			<p id="temp">TEMPERATURE</p>
-			<p id="forecast">FORECAST</p>
-		</div>
-	</div
+	</head>
+	<!-- <script>
+	x.style.display === "none"
+</script>
+	<button onclick="myFunction()">Click Me</button> -->
 	
-	<div id="2">
-		<div id="min">
-			<p id="minimum">min</p>
-			<p id="min-temp">MIN-TEMP</p>
-		</div>
-		<div id="max">
-			<p id="maximum">max</p>
-			<p id="max-temp">MAX-TEMP</p>
-		</div>
+	<!-- <div id="myWeatherApp"> -->
+	
+		<body>
+		
+		<div id="1">
+			<div id="top-area">
+				<input id='zipCode' value='Enter yor zip code.'></input>
+				<input type='submit' id='submit' value='submit'></input>
+			</div>
+			<div id="mid-section">
+				<p id="city">city</p>
+				<p id="temp">temp</p>
+				<p id="forecast">The forecast is there will be</p>
+			</div>			
+			<div id="btm-section">
+				<section id="min">
+					<p id="minimum">min</p>
+					<p id="min-temp">data.main.temp_min</p>
+				</section>
+				<section id="max">
+					<p id="maximum">max</p>
+					<p id="max-temp">data.main.temp_max</p>
+				</section>
+			</div>
+		</body>
 	</div>
-</body>
-</html>
+		</html>
+		
+		<!-- Scripts -->
+		<script defer src="./script.js"></script>
