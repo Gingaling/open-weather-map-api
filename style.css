@@ -1,26 +1,28 @@
 #myWeatherApp {
-	display: none;
+	
 }
 
 * {
 	align-items: center;
 	max-width = 800;
+	/* display: none */
 }
 
 body {
 	display: flex;
-	max-width: 300px;
+	width: 300px;
 	/* align-items: center; */
 	font-weight: bolder;
 	flex-direction: column;
-	justify-content: flex-start;
+	/* justify-content: center; */
 	outline: 1px solid black;
 }
 
 #top-area {
-	align-items: center;
+	width: 300px;
+	/* align-items: center; */
 	outline: 1px solid black;
-	padding: 0 0 10px 10px;
+	padding: 10px 0 10px 0;
 }
 
 #mid-section {
@@ -34,7 +36,7 @@ body {
 	color: black;
 	height: 15px;
 	width: 160px;
-	margin: 20px 20px 0 20px;
+	margin: 20px 20px 5px0 40px;
 	outline: 1px solid green;
 	background-color: white);
 }
