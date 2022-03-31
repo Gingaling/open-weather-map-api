@@ -8,6 +8,14 @@ const minTemp = document.getElementById('min-temp');
 const maxTemp = document.getElementById('max-temp');
 const toggle = document.getElementById('hidden-content');
 const topArea = document.querySelector('.top-area');
+const sunrise = document.getElementById('sunrise');
+const sunset = document.getElementById('sunset');
+
+function convertTime(x) {
+	let unix = x;
+	let date = new Date(unix * 1000);
+	return date;
+}
 
 form.addEventListener('submit', event => {
 	event.preventDefault();
@@ -18,17 +26,14 @@ form.addEventListener('submit', event => {
 	fetch(url)
 		.then(response => response.json())
 		.then(data => {
-			city.textContent = '';
-			temp.textContent = '';
-			forecast.textContent = '';
-			minTemp.textContent = '';
-			maxTemp.textContent = '';
-
+			console.log(data);
 			city.textContent = data.name;
 			temp.textContent = Math.floor(data.main.temp) + '°';
 			forecast.textContent = data.weather[0].description;
 			minTemp.textContent = Math.floor(data.main.temp_min) + '°';
 			maxTemp.textContent = Math.floor(data.main.temp_max) + '°';
+			sunrise.textContent = convertTime(data.sys.sunrise);
+			sunset.textContent = convertTime(data.sys.sunset);
 
 			if ((toggle.classList = 'hidden')) {
 				toggle.classList.toggle('hidden');
