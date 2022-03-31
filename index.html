@@ -1,50 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
-	
-	<!-- Style Sheet -->
-	<link rel="stylesheet" href="./style.css"/>
-	<!-- 
-		<!-- JQuery -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
-		
-		<!-- Scripts -->
-		<script defer src="script.js"></script>
-		
-		<title>Ging Louie's Weather App</title>
-	</head>
-	
-	
-	
-	 
-		<body>
-		
-		<div id="1">
-			<div id="top-area">
-				<input id='zipCode' value='Enter your zip code.'></input>
-				<button id='submit' value='submit'>submit</button>
-			</div>
-			<div id="mid-section">
-				<p id="city">city</p>
-				<p id="temp">temp</p>
-				<p id="forecast">The forecast is there will be</p>
-			</div>			
-			<div id="btm-section">
-				<section id="min">
-					<p id="minimum">min</p>
-					<p id="min-temp">data.main.temp_min</p>
-				</section>
-				<section id="max">
-					<p id="maximum">max</p>
-					<p id="max-temp">data.main.temp_max</p>
-				</section>
-			</div>
-		</body>
-		</html>
-		
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Scripts -->
+    <script defer src="script.js"></script>
+
+    <title>Ging Louie's Weather App</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="top-area">
+        <header>Ging's Weather App</header>
+        <form id="get-zip">
+          <div id="zipcolumn">
+            <label for="zipCode">Enter Zip Code</label>
+            <input type="number" id="zipCode" placeholder="Enter zip code" />
+          </div>
+          <button type="submit">Search</button>
+        </form>
+      </div>
+      <div class="hidden" id="hidden-content">
+        <hr />
+        <main id="mid-section">
+          <h2 id="city">test</h2>
+          <h1 id="temp">
+            test
+            <span>&deg;</span>
+          </h1>
+          <p id="forecast">test</p>
+        </main>
+        <div id="btm-section">
+          <div class="minSection column">
+			  <p id="min-temp2">min</p>
+            <p id="min-temp">min</p>
+          </div>
+          <div class="maxSection column">
+			  <p id="max-temp2">max</p>
+            <p id="max-temp">max</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

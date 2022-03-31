@@ -1,31 +1,38 @@
-console.log('I work.');
-
-//  ELEMENT VARIABLES
+//  VARIABLES
+const form = document.getElementById('get-zip');
 const zipInput = document.getElementById('zipCode');
-console.log(zipInput.val);
-const submitButton = document.getElementById('submit');
+const city = document.getElementById('city');
+const temp = document.getElementById('temp');
+const forecast = document.getElementById('forecast');
+const minTemp = document.getElementById('min-temp');
+const maxTemp = document.getElementById('max-temp');
+const toggle = document.getElementById('hidden-content');
+const topArea = document.querySelector('.top-area');
 
-// submitButton.addEventListener('click', () => {
-	const url = `https://api.openweathermap.org/data/2.5/weather?zip=94109&units=imperial&appid=df35e93312fb4ec3f7593d0a28cae1aa`;
+form.addEventListener('submit', event => {
+	event.preventDefault();
+	topArea.style.transform = 'translateY(-40%)';
+	const userInput = zipInput.value;
+	const url = `https://api.openweathermap.org/data/2.5/weather?zip=${userInput},us&units=imperial&appid=df35e93312fb4ec3f7593d0a28cae1aa`;
 
 	fetch(url)
-		.then((response) => response.json())
-		.then((data) => {
-			console.log('Success!');
-			console.log(data);
-			console.log(data.name);
-			document.getElementById('city').innerText = data.name;
-			document.getElementById('temp').innerText = `${Math.round(
-				data.main.temp
-			)}\u00B0`;
-			document.getElementById('min-temp').innerText = data.main.temp_min;
-			document.getElementById('max-temp').innerText = data.main.temp_max;
-			console.log(data.weather[0]);
-			document.getElementById(
-				'forecast'
-			).innerText = `The forecast is: ${data.weather[0].description}.`;
+		.then(response => response.json())
+		.then(data => {
+			city.textContent = '';
+			temp.textContent = '';
+			forecast.textContent = '';
+			minTemp.textContent = '';
+			maxTemp.textContent = '';
+
+			city.textContent = data.name;
+			temp.textContent = Math.floor(data.main.temp) + '°';
+			forecast.textContent = data.weather[0].description;
+			minTemp.textContent = Math.floor(data.main.temp_min) + '°';
+			maxTemp.textContent = Math.floor(data.main.temp_max) + '°';
+
+			if ((toggle.classList = 'hidden')) {
+				toggle.classList.toggle('hidden');
+			}
 		})
-		.catch((err) => {
-			console.log('something went wrong...', err);
-		});
-// });
+		.catch(err => console.log(err));
+});

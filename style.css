@@ -1,75 +1,89 @@
-#myWeatherApp {
-	
-}
-
 * {
-	align-items: center;
-	max-width = 800;
-	/* display: none */
+	box-sizing: border-box;
 }
 
-body {
-	display: flex;
-	width: 300px;
-	/* align-items: center; */
-	font-weight: bolder;
-	flex-direction: column;
-	/* justify-content: center; */
-	outline: 1px solid black;
+:root {
+	font-family: "Raleway", Arial, sans-serif;
 }
 
-#top-area {
-	width: 300px;
-	/* align-items: center; */
-	outline: 1px solid black;
-	padding: 10px 0 10px 0;
-}
-
-#mid-section {
+.container {
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
+	justify-content: center;
+	border: 2px;
 }
 
-#zipCode {
-	color: black;
-	height: 15px;
-	width: 160px;
-	margin: 20px 20px 5px0 40px;
-	outline: 1px solid green;
-	background-color: white);
+.top-area {
+	transition: .5s ease-in-out;
 }
 
-#submit {
-	outline: 1px solid green;
-	border-radius: 5px;
+header {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+	text-align: center;
+	font-size: 2rem;
 }
 
-#city {
-	font-style: italic;
+form {
+	display: flex;
+	justify-content: center;
+	text-align: center;
 }
-<script>
 
-#temp {
-	color: blue;
-	font-size: 70px;
+label {
+	display: block;
+	padding-bottom: 1px;
 }
-</script>
+
+button {
+	margin-top: 18px;
+	margin-left: 10px;
+}
+
+h1 {
+	height: 200px;
+	font-size: 8rem;
+	margin-top: 0;
+	margin-bottom: 30px;
+}
 
 #forecast {
+	font-size: 3rem;
+	margin-top: 20px;
+	padding: 20px;
+}
 
+#hidden-content {
+	text-align: center;
 }
 
 #btm-section {
 	display: flex;
-	max-width: 300px;
 	flex-direction: row;
-	align-items: center;
-	font-weight: bolder;
 	justify-content: space-around;
+	font-size: 3rem;
+	line-height: 2px;
 }
 
-section {
-	width: 80px;
+#min-temp2,
+#max-temp2 {
+	font-size: 1rem;
+	line-height: 2px;
+}
+
+#min-temp,
+#max-temp {
+	font-size: 2.5rem;
+	line-height: 2px;
+}
+
+.column {
+	display: block;
+}
+
+.hidden {
+	display: none;
 }
