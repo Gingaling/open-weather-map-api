@@ -28,22 +28,22 @@ form.addEventListener('submit', event => {
 		.then(data => {
 			console.log(data);
 			city.textContent = data.name;
-			if (Math.floor(data.main.temp) > 90) {
+			if (Math.floor(data.main.temp) >= 85) {
 				temp.style.color = 'red';
-			} else if (Math.floor(data.main.temp) < 40) {
+			} else if (Math.floor(data.main.temp) <= 40) {
 				temp.style.color = 'blue';
 			}
 			temp.textContent = Math.floor(data.main.temp) + '°';
 			forecast.textContent = data.weather[0].description;
-			if (Math.floor(data.main.temp_min) > 90) {
+			if (Math.floor(data.main.temp_min) >= 85) {
 				minTemp.style.color = 'red';
-			} else if (Math.floor(data.main.temp_min) < 40) {
+			} else if (Math.floor(data.main.temp_min) <= 40) {
 				minTemp.style.color = 'blue';
 			}
 			minTemp.textContent = Math.floor(data.main.temp_min) + '°';
-			if (Math.floor(data.main.temp_max) > 90) {
+			if (Math.floor(data.main.temp_max) >= 85) {
 				maxTemp.style.color = 'red';
-			} else if (Math.floor(data.main.temp_max) < 40) {
+			} else if (Math.floor(data.main.temp_max) <= 40) {
 				maxTemp.style.color = 'blue';
 			}
 			maxTemp.textContent = Math.floor(data.main.temp_max) + '°';
